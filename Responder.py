@@ -39,7 +39,7 @@ parser.add_option('-v','--verbose',        action="store_true", help="Increase v
 options, args = parser.parse_args()
 
 if not os.geteuid() == 0:
-    print color("[!] Responder must be run as root.")
+    print (color("[!] Responder must be run as root."))
     sys.exit(-1)
 elif options.OURIP is None and IsOsX() is True:
     print "\n\033[1m\033[31mOSX detected, -i mandatory option is missing\033[0m\n"
